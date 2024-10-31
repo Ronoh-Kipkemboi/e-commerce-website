@@ -316,12 +316,12 @@ body {
   justify-content: center;
   align-items: flex-start;
   background-image: url("img/banner/b018.webp");
-  min-width: 60px;
+  min-width: 48%;
   height: 50vh;
   background-size: cover;
   background-position: center;
   padding: 30px;
-  
+  margin: 0 10px;
 }
 
 #sm-banner .banner-box2{
