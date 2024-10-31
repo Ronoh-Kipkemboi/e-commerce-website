@@ -736,9 +736,20 @@ footer .copyright{
     width: 100%;
   }
   footer .copyright{
-    text-align: start;
+    text-align: start
   }
-}h4 {
-  font-size: 20px;
-  color: black;
+  
+  #prodetails{
+    display: flex;
+    flex-direction: column;
+  }
+  #prodetails .single-pro-image{
+    width: 100%;
+    margin-right: 0;
+  }
+  #prodetails .single-pro-details{
+    width: 100%;
+  }
+
+  
 }
