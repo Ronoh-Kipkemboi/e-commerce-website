@@ -668,6 +668,104 @@ footer .copyright{
   height: 100%;
   border-radius: 20px;
 }
+#contact-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  
+}
+#contact-details .details{
+  width: 40%;
+}
+#contact-details .details span, 
+#form-details form span{
+  font-size: 13px;
+  color: hsl(0, 88%, 74%);
+}
+#contact-details .details h2,
+#form-details form h2{
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+  color: hsl(219, 78%, 56%);
+}
+#contact-details .details h3{
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+#contact-details .details li{
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+#contact-details .details li i{
+  font-size: 14px;
+  padding-right: 10px;
+}
+#contact-details .details li p{
+  font-size: 14px;
+  margin: 0;
+}
+#contact-details .map{
+  width: 55%;
+  height: 300px;
+  border: 2px solid #088178;
+}
+#contact-details iframe{
+  width: 100%;
+  height: 100%;
+}
+#form-details{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 8px 5px 80px 5px;
+  border: 2px solid #dfdddd;
+}
+  
+#form-details form{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-details form input,
+#form-details form textarea{
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #222  ;
+}
+#form-details form button{
+  background-color: #055853;
+  color: #fff;
+}
+#form-details .people div{
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#form-details .people div img{
+  width: 65px;
+  height: 65px;
+  margin-right: 15px;
+}
+#form-details .people div p{
+  padding-top: 10px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+#form-details .people div p span{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
 
 
 @media (max-width:799px){
@@ -767,6 +865,12 @@ footer .copyright{
   }
   footer .copyright{
     text-align: start;
+  }
+  #form-details{
+    padding: 40px;
+  }
+  #form-details form{
+    width: 50%;
   }
 }
 
@@ -870,6 +974,25 @@ footer .copyright{
     width: 100%;
     height: 90%;
   }
-
-  
+  #contact-details{
+    
+    flex-direction: column;
+  }
+  #contact-details .details{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  #contact-details .map{
+    width: 100%;
+  }
+  #form-details{
+    margin: 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  #form-details form{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
 }
