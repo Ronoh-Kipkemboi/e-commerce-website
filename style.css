@@ -176,7 +176,7 @@ body {
 }
 #hero button{
   background-image: url("img/button.png");
-  background-color: transparent;
+  background-color: transparent ;
   color: black;
   border: 0;
   padding: 14px 80px 14px 65px;
