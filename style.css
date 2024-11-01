@@ -134,16 +134,38 @@ body {
   display: none;
 }
 #hero{
-  background-image: url("img/hero010.webp");
-  height: 90vh;
-  width: 100%;
+  background-image: url("img/hero0001.webp");
   background-size: cover;
   background-position: top 25% right 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
   padding: 0 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  position: relative;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3); /* Slight overlay to improve text readability */
+  z-index: 1;
+}
+
+#hero h4,
+#hero h2,
+#hero h1,
+#hero p,
+#hero button {
+  position: relative;
+  z-index: 2;
 }
 
 #hero h4{
@@ -195,6 +217,7 @@ body {
 #feature .fe-box img{
   width: 100%;
   margin-bottom: 10px;
+  object-fit: contain;
 }
 #feature .fe-box:nth-child(2) h6{
   background-color: #cdebbc;
@@ -236,6 +259,8 @@ body {
 #product1 .pro img{
   width: 100%;
   border-radius: 20px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 #product1 .pro .des{
   text-align: start;
@@ -995,4 +1020,485 @@ footer .copyright{
     margin-right: 0;
     margin-bottom: 25px;
   }
+}
+
+/* Media Queries for Different Screen Sizes */
+
+/* Extra Large Devices (Large Desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .section-p1 {
+        padding: 40px 120px;
+    }
+    
+    #product1 .pro-container {
+        gap: 40px;
+    }
+    
+    #product1 .pro {
+        width: 300px;
+    }
+    
+    #hero {
+        background-position: top 0 right 0;
+        padding: 0 120px;
+    }
+}
+
+/* Large Devices (Desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .section-p1 {
+        padding: 40px 100px;
+    }
+    
+    #product1 .pro {
+        width: 280px;
+    }
+}
+
+/* Medium Devices (Tablets, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #navbar {
+        padding: 0 20px;
+    }
+    
+    #hero {
+        height: 85vh;
+        background-position: top 30% right 30%;
+    }
+    
+    #feature .fe-box {
+        width: 165px;
+        margin: 0 10px 20px;
+    }
+    
+    #banner {
+        height: 35vh;
+    }
+}
+
+/* Small Devices (Landscape Phones, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #header {
+        padding: 20px 30px;
+    }
+    
+    #hero {
+        height: 70vh;
+        padding: 0 50px;
+        background-position: 55%;
+    }
+    
+    #feature {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    #product1 .pro {
+        width: calc(50% - 20px);
+    }
+    
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 40vh;
+        margin-bottom: 20px;
+    }
+    
+    footer .col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones, less than 768px) */
+@media (max-width: 767px) {
+    #header {
+        padding: 10px 20px;
+    }
+    
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    
+    #navbar.active {
+        right: 0px;
+    }
+    
+    #navbar li {
+        margin-bottom: 25px;
+    }
+    
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+    
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+    
+    #lg-bag {
+        display: none;
+    }
+    
+    #hero {
+        height: 60vh;
+        padding: 0 20px;
+        background-position: 55%;
+    }
+    
+    #feature {
+        justify-content: space-between;
+    }
+    
+    #feature .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+    
+    #banner {
+        height: 40vh;
+    }
+    
+    #sm-banner .banner-box {
+        height: 40vh;
+    }
+    
+    #banner3 {
+        padding: 0 20px;
+    }
+    
+    #banner3 .banner-box {
+        width: 100%;
+    }
+    
+    #newsletter {
+        padding: 40px 20px;
+    }
+    
+    #newsletter .form {
+        width: 100%;
+    }
+    
+    footer .copyright {
+        text-align: start;
+    }
+}
+
+/* Very Small Devices (Small Portrait Phones, less than 576px) */
+@media (max-width: 575px) {
+    .section-p1 {
+        padding: 20px;
+    }
+    
+    #header {
+        padding: 10px 15px;
+    }
+    
+    h1 {
+        font-size: 38px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    #hero {
+        padding: 0 15px;
+        height: 50vh;
+    }
+    
+    #feature .fe-box {
+        width: 145px;
+    }
+    
+    #feature {
+        justify-content: space-between;
+    }
+    
+    #product1 .pro {
+        width: 100%;
+    }
+    
+    /* Blog page responsiveness */
+    #blog {
+        padding: 100px 20px 0 20px;
+    }
+    
+    #blog .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #blog .blog-img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    #blog .blog-details {
+        width: 100%;
+    }
+    
+    /* About page responsiveness */
+    #about-head {
+        flex-direction: column;
+    }
+    
+    #about-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    #about-head div {
+        padding-left: 0;
+    }
+    
+    /* Contact page responsiveness */
+    #contact-details {
+        flex-direction: column;
+    }
+    
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    #contact-details .map {
+        width: 100%;
+    }
+    
+    #form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+    
+    #form-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* For Landscape Mode on Mobile Devices */
+@media (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        height: 100vh;
+        background-position: center;
+    }
+    
+    #hero h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    
+    #hero h2 {
+        font-size: 26px;
+    }
+    
+    #hero h4 {
+        font-size: 16px;
+    }
+}
+
+/* For High-DPI Screens (Retina Displays) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #hero {
+        background-image: url("img/hero0001.webp");
+    }
+}
+
+/* For Print Media */
+@media print {
+    #header,
+    #newsletter,
+    footer {
+        display: none;
+    }
+    
+    #hero {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .section-p1 {
+        padding: 20px 0;
+    }
+}
+
+/* Update existing image-related styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#hero {
+    background-image: url("img/hero0001.webp");
+    background-size: cover;
+    background-position: top 25% right 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+/* Product images */
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+/* Feature box images */
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+/* Banner images */
+#banner {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+#sm-banner .banner-box {
+    background-size: cover;
+    background-position: center;
+}
+
+#banner3 .banner-box {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Blog images */
+#blog .blog-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Update media queries for better image handling */
+@media (max-width: 991px) {
+    #hero {
+        height: 70vh;
+        padding: 0 40px;
+        background-position: top 30% right 30%;
+    }
+    
+    #product1 .pro img {
+        aspect-ratio: 1/1;
+    }
+    
+    #banner, 
+    #sm-banner .banner-box,
+    #banner3 .banner-box {
+        background-position: center;
+    }
+}
+
+@media (max-width: 767px) {
+    #hero {
+        height: 60vh;
+        background-position: 55% center;
+        padding: 0 20px;
+    }
+    
+    #feature .fe-box img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #blog .blog-img img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 575px) {
+    #hero {
+        height: 50vh;
+        background-position: 58% center;
+    }
+    
+    #product1 .pro img {
+        height: auto;
+    }
+    
+    #blog .blog-img img {
+        height: 200px;
+    }
+    
+    .logo {
+        max-width: 120px;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 380px) {
+    #hero {
+        height: 45vh;
+    }
+    
+    #feature .fe-box {
+        width: 135px;
+    }
+    
+    #feature .fe-box img {
+        width: 100%;
+    }
+    
+    #blog .blog-img img {
+        height: 180px;
+    }
+}
+
+/* For landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        height: 100vh;
+        background-position: center;
+    }
+    
+    #product1 .pro img {
+        max-height: 200px;
+    }
+}
+
+/* High-DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #hero {
+        background-image: url("img/hero0001.webp");
+    }
 }
